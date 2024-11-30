@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "header_msg.h": "c",
+        "unistd.h": "c"
+    }
+}
