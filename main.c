@@ -3,13 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "header_msg.h"
-#include "utils.c"
-
-
-
+#include "question1.c"
+#include "question4.c"
 
 
 int main() {
+ 
 
 char input_user[64];
 
@@ -19,9 +18,6 @@ char input_user[64];
 
     
     while (1) {
-        
-            write(STDOUT_FILENO, PROMPT, strlen(PROMPT));
-           
 
             int user_answer = read (STDOUT_FILENO,input_user,sizeof(input_user) - 1);
         
@@ -29,6 +25,7 @@ char input_user[64];
 
             pid_t pid = fork();
 
+           
 
             if (strcmp(input_user, EXIT_CONDITION) == 0 || user_answer <= 0) {
             write(STDOUT_FILENO, EXIT_MESSAGE, strlen(EXIT_MESSAGE));
@@ -41,10 +38,12 @@ char input_user[64];
             exit(EXIT_FAILURE);
 
             } else if (pid > 0) {
-                wait(NULL);
+                wait(&status);
             } else {
                 exit(EXIT_FAILURE);
             }
+
+             write_prompt(); 
 
         }
 

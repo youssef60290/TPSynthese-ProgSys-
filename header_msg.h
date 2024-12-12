@@ -5,3 +5,6 @@
 #define EXIT_MESSAGE "Bye bye..."
 #define EXIT_CONDITION "exit"
 #define PROMPT "enseash % "
+#define PROMPT_EXIT_PREFIX "enseash [exit:"
+#define PROMPT_SIGN_PREFIX "enseash [sign:"
+#define PROMPT_SUFFIX "] % "
