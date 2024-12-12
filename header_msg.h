@@ -8,3 +8,5 @@
 #define PROMPT_EXIT_PREFIX "enseash [exit:"
 #define PROMPT_SIGN_PREFIX "enseash [sign:"
 #define PROMPT_SUFFIX "] % "
+#define PROMPT_SEPARATOR "|"
+#define MS_SUFFIX "ms"
